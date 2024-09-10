@@ -1,0 +1,27 @@
+{
+  "name": "shopping_bot",
+  "version": "1.0.0",
+  "description": "This is shopping bot",
+  "main": "bot.js",
+  "repository": "https://github.com/bug4you/",
+  "author": "Dilshod Fayzullayev <brogrammer.devs@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.1.2",
+    "chalk": "^5.3.0",
+    "consola": "^3.2.3",
+    "dotenv": "^16.4.5",
+    "short-unique-id": "^5.2.0",
+    "telegraf": "^4.16.3",
+    "telegraf-keyboard": "^1.1.5",
+    "telegram-keyboard": "^2.3.5"
+  }
+}
