@@ -333,6 +333,13 @@ const removeCartItem = (cart_id) => {
     }
 }
 
+/**
+ * Buyurtma qo'shish
+ * @param customer_id
+ * @param design_id
+ * @param phone
+ * @returns {{success: boolean, message: string}}
+ */
 const addOrder = (customer_id, design_id, phone) => {
     try {
         updatePhone(customer_id, phone);
@@ -347,6 +354,11 @@ const addOrder = (customer_id, design_id, phone) => {
     }
 };
 
+/**
+ * Savatchani tozalash
+ * @param user_id
+ * @returns {{success: boolean, message: string}}
+ */
 const clearCart = (user_id) => {
     try {
         const stmt = db.prepare(`
@@ -358,6 +370,8 @@ const clearCart = (user_id) => {
         return {success: false, message: "Savatchani tozalashda xatolik yuz berdi."};
     }
 };
+
+
 
 module.exports = {
     addNewUser,

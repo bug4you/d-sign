@@ -8,7 +8,13 @@ const {
     approveDesigner,
     registeredUser,
     editAdminStatus,
-    updateDesignByHashId, getAllActiveDesigns, getCategoryById, getDesignById, addToCart, removeCartItem, clearCart
+    updateDesignByHashId,
+    getAllActiveDesigns,
+    getCategoryById,
+    getDesignById,
+    addToCart,
+    removeCartItem,
+    clearCart
 } = require("./src/db/db");
 const {
     firstNameScene,
@@ -30,6 +36,7 @@ const {editCategoryNameScene, editCategoryName} = require("./src/wizard/EditCate
 const {consola} = require("consola");
 const {Keyboard} = require("telegram-keyboard");
 const {clearCartConfirm} = require("./src/wizard/ClearCart");
+const {orderRegistered, orderRegisteredUserFullname, orderRegisteredUserPhone} = require("./src/wizard/OrderRegistered");
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
@@ -48,7 +55,10 @@ const stage = new Stage([
     editCategoryNameScene,
     editCategoryName,
     designCategoryScene,
-    clearCartConfirm
+    clearCartConfirm,
+    orderRegistered,
+    orderRegisteredUserFullname,
+    orderRegisteredUserPhone
 ]);
 
 bot.use(session());

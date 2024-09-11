@@ -415,7 +415,7 @@ class BotCommand {
 
     async orderRegister(ctx) {
         try {
-            await ctx.scene.enter("order_register");
+            await ctx.scene.enter("order_registered");
         } catch (e) {
             consola.error(e.message);
         }
